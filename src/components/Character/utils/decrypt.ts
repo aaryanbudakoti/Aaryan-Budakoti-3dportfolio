@@ -14,7 +14,7 @@ export const decryptFile = async (
   url: string,
   password: string
 ): Promise<ArrayBuffer> => {
-  const response = await fetch(url);
+  const response = await fetch(window.location.origin + url);
   const encryptedData = await response.arrayBuffer();
   const iv = new Uint8Array(encryptedData.slice(0, 16));
   const data = encryptedData.slice(16);
