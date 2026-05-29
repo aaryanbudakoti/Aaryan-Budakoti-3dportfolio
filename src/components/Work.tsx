@@ -7,7 +7,7 @@ const projects = [
   {
     title: "EVENTX",
     category: "Event Management & Booking Platform",
-    tools: "Python , Django , html , css, mysql ",
+    tools: "Python , Django , HTML , CSS, MySQL ",
     image: "/images/eventx.webp",
     link: "https://github.com/aaryanbudakoti/EVENTX.git",
   },
