@@ -29,7 +29,7 @@ const projects = [
     title: "Avengers Portfolio",
     category: "Superhero-Themed Developer Portfolio",
     tools: "HTML, CSS, JavaScript",
-    image: "/images/placeholder.png",
+    image: "/images/avengers.png",
     link: "https://github.com/aaryanbudakoti/Avengers-portfolio.git",
   },
 ];
