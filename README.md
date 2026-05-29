@@ -91,6 +91,4 @@ All personal content is in these files — swap out your own details:
 | `src/components/Navbar.tsx` | Logo initials, nav links |
 | `src/index.css` | `--primary` / `--secondary` CSS variables for theme color |
 
-## 📄 License
 
-This project is based on [3d-portfolio](https://github.com/akashrmalhotra/3d-portfolio) by Akash Malhotra. Customized and extended for Aaryan Budakoti.
