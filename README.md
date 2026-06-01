@@ -2,6 +2,14 @@
 
 A fully immersive 3D portfolio website built with React, Three.js, and GSAP. Features an animated 3D character, physics-based tech-stack balls, smooth scroll animations, and a Cyber Blue theme.
 
+
+## Snippets 
+<img width="1590" height="780" alt="Screenshot 2026-05-25 151550" src="https://github.com/user-attachments/assets/849ca495-c85d-4121-a115-0391eb96ccab" />
+
+<img width="1585" height="774" alt="Screenshot 2026-05-25 151608" src="https://github.com/user-attachments/assets/180535ec-f6d1-4bce-b689-b8d0acf3ad45" />
+
+
+
 ## ✨ Features
 
 - **3D Character Model** — An animated, rigged character that responds to mouse movement
