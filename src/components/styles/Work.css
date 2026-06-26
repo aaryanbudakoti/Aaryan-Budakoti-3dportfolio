@@ -114,6 +114,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;      
+  max-width: 50%;        
 }
 
 /* ── Navigation Arrows ── */
@@ -191,8 +193,10 @@
 
 .work-image-in {
   position: relative;
+  display: block;        
+  overflow: hidden;      
+  border-radius: 8px;    
 }
-
 .work-link {
   position: absolute;
   bottom: 10px;
