@@ -7,7 +7,7 @@ const projects = [
   {
     title: "EVENTX",
     category: "Event Management & Booking Platform",
-    tools: "Python , Django , HTML , CSS, MySQL ",
+    tools: "Python , Django , HTML , CSS, MySQL",
     image: "/images/eventx.png",
     link: "https://github.com/aaryanbudakoti/EVENTX.git",
   },
@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: "Spendly - Expense Tracker",
-    category: "Personal finance tracker built with React",
+    category: "Personal Finance Tracker",
     tools: "React, JavaScript, Tailwind CSS, Recharts",
     image: "/images/spendly.png",
     link: "https://github.com/aaryanbudakoti/Spendly-ExpenseTracker.git",
@@ -37,28 +37,33 @@ const projects = [
 const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   const goToSlide = useCallback(
     (index: number) => {
       if (isAnimating) return;
       setIsAnimating(true);
-      setCurrentIndex(index);
-      setTimeout(() => setIsAnimating(false), 500);
+      setVisible(false);
+      setTimeout(() => {
+        setCurrentIndex(index);
+        setVisible(true);
+        setTimeout(() => setIsAnimating(false), 400);
+      }, 300);
     },
     [isAnimating]
   );
 
   const goToPrev = useCallback(() => {
-    const newIndex =
-      currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
+    const newIndex = currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
   const goToNext = useCallback(() => {
-    const newIndex =
-      currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
+    const newIndex = currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
+
+  const project = projects[currentIndex];
 
   return (
     <div className="work-section" id="work">
@@ -85,42 +90,42 @@ const Work = () => {
             <MdArrowForward />
           </button>
 
-          <div className="carousel-track-container">
+          <div
+            className="carousel-track-container"
+            style={{
+              borderTop: "1px solid #363636",
+              borderBottom: "1px solid #363636",
+              padding: "50px 0",
+            }}
+          >
             <div
-              className="carousel-track"
+              className="carousel-content"
               style={{
-                transform: `translateX(-${currentIndex * (100 / projects.length)}%)`,
-                width: `${projects.length * 100}%`,
+                opacity: visible ? 1 : 0,
+                transform: visible ? "translateY(0)" : "translateY(12px)",
+                transition: "opacity 0.3s ease, transform 0.3s ease",
               }}
             >
-              {projects.map((project, index) => (
-                <div className="carousel-slide" key={index}>
-                  <div className="carousel-content">
-                    <div className="carousel-info">
-                      <div className="carousel-number">
-                        <h3>0{index + 1}</h3>
-                      </div>
-                      <div className="carousel-details">
-                        <h4>{project.title}</h4>
-                        <p className="carousel-category">
-                          {project.category}
-                        </p>
-                        <div className="carousel-tools">
-                          <span className="tools-label">Tools & Stack</span>
-                          <p>{project.tools}</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="carousel-image-wrapper">
-                      <WorkImage
-                        image={project.image}
-                        alt={project.title}
-                        link={project.link}
-                      />
-                    </div>
+              <div className="carousel-info">
+                <div className="carousel-number">
+                  <h3>0{currentIndex + 1}</h3>
+                </div>
+                <div className="carousel-details">
+                  <h4>{project.title}</h4>
+                  <p className="carousel-category">{project.category}</p>
+                  <div className="carousel-tools">
+                    <span className="tools-label">Tools & Stack</span>
+                    <p>{project.tools}</p>
                   </div>
                 </div>
-              ))}
+              </div>
+              <div className="carousel-image-wrapper">
+                <WorkImage
+                  image={project.image}
+                  alt={project.title}
+                  link={project.link}
+                />
+              </div>
             </div>
           </div>
 
