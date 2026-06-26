@@ -30,6 +30,7 @@
 .carousel-track-container {
   overflow: hidden;
   width: 100%;
+  position: relative;
   border-top: 1px solid #363636;
   border-bottom: 1px solid #363636;
 }
@@ -45,6 +46,7 @@
   flex-shrink: 0;
   box-sizing: border-box;
   padding: 50px 0;
+  overflow: hidden;
 }
 
 .carousel-content {
