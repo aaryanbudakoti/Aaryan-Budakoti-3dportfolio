@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: "Spendly - Expense Tracker",
-    category: "Responsive SEO-Optimized Landing Page",
+    category: "Personal finance tracker built with React",
     tools: "React, JavaScript, Tailwind CSS, Recharts",
     image: "/images/spendly.png",
     link: "https://github.com/aaryanbudakoti/Spendly-ExpenseTracker.git",
@@ -89,7 +89,8 @@ const Work = () => {
             <div
               className="carousel-track"
               style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
+                transform: `translateX(-${currentIndex * (100 / projects.length)}%)`,
+                width: `${projects.length * 100}%`,
               }}
             >
               {projects.map((project, index) => (
@@ -127,8 +128,9 @@ const Work = () => {
             {projects.map((_, index) => (
               <button
                 key={index}
-                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
-                  }`}
+                className={`carousel-dot ${
+                  index === currentIndex ? "carousel-dot-active" : ""
+                }`}
                 onClick={() => goToSlide(index)}
                 aria-label={`Go to project ${index + 1}`}
                 data-cursor="disable"
