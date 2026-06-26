@@ -19,11 +19,11 @@ const projects = [
     link: "https://github.com/aaryanbudakoti/Hiresense-AI-ATS-Resume-Optimizer-.git",
   },
   {
-    title: "The Pharmacy Landing Page",
+    title: "Spendly - Expense Tracker",
     category: "Responsive SEO-Optimized Landing Page",
-    tools: "HTML, CSS, JavaScript",
-    image: "/images/pharmacy.png",
-    link: "https://github.com/aaryanbudakoti/the-pharmacy-landing-page.git",
+    tools: "React, JavaScript, Tailwind CSS, Recharts",
+    image: "/images/spendly.png",
+    link: "https://github.com/aaryanbudakoti/Spendly-ExpenseTracker.git",
   },
   {
     title: "Avengers Portfolio",
