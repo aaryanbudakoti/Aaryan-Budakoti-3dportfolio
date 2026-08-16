@@ -5,11 +5,11 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "EVENTX",
-    category: "Event Management & Booking Platform",
-    tools: "Python , Django , HTML , CSS, MySQL",
-    image: "/images/eventx.png",
-    link: "https://github.com/aaryanbudakoti/EVENTX.git",
+    title: "Hirely",
+    category: "Role-Based Job Board Platform",
+    tools: "React, Node.js, Express, MongoDB, JWT",
+    image: "/images/hirely.png",
+    link: "https://github.com/aaryanbudakoti/Hirely.git",
   },
   {
     title: "HireSense AI",
@@ -26,11 +26,11 @@ const projects = [
     link: "https://github.com/aaryanbudakoti/Spendly-ExpenseTracker.git",
   },
   {
-    title: "Avengers Portfolio",
-    category: "Superhero-Themed Developer Portfolio",
-    tools: "HTML, CSS, JavaScript",
-    image: "/images/avengers.png",
-    link: "https://github.com/aaryanbudakoti/Avengers-portfolio.git",
+    title: "Quizzy",
+    category: "Interactive Quiz & Assessment App",
+    tools: "React, Node.js, Express, MongoDB, JWT",
+    image: "/images/quizzy.png",
+    link: "https://github.com/aaryanbudakoti/Quizzy.git",
   },
 ];
 
